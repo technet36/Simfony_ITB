@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for review in reviews %}
+        <div id="review">
+            <div id="review_text">{{ review.description }}</div>
+            <div id="review_rate">{{ review.rate}}</div>
+            <div id="review_price">{{ review.price}}</div>
+        </div>
+    {% endfor %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}

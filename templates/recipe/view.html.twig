@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        .border {border: black solid 1px}
+        #recipe_page {
+            display: inline-block;
+            position: relative;
+            margin: auto;
+        }
+        #left_pane {
+            width: 200px;
+        }
+        #name {
+            width: 100%;
+        }
+        #tags{
+            width: 100%;
+        }
+    </style>
+
+    <div id="recipe_page" class="border">
+        <div class="border" id="left_pane">
+            <h2 id="name">{% recipe.name %}</h2>
+            <div class="border" id="tags">
+                <ul>
+                    {% for tag in recipe.tags %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="border" id="right_pane">
+            <label for="description">Description:</label>
+            <p class="border" id="description">{% recipe.sumary %}</p>
+        </div>
+
+    </div>
+
+{% endblock %}

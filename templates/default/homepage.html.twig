@@ -1,0 +1,14 @@
+{%  extends 'base.html.twig' %}
+
+{% block body %}
+<h1>myWebSite</h1>
+
+<p>Do you want some food ?</p>
+<form >
+    <label for="searchbox">Search food:</label>
+    <input id="searchbox" type="text"/>
+    <button type="submit">Search</button>
+</form>
+    <a href="/recipe">Add a new recipe</a>
+
+{% endblock %}
